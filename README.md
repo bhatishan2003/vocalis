@@ -21,27 +21,32 @@ Vocalis brings the magic of modern voice dictation into your terminal and editor
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Installation
 
-### 1. Installation
-
-Clone and sync the project with [`uv`](https://github.com/astral-sh/uv):
+### Option 1: Using `uv tool` (Recommended)
+Modern Linux and macOS distros protect the system Python environment (PEP 668). `uv tool` installs Vocalis into an isolated environment and makes the `vocalis` command globally available anywhere on your system:
 
 ```bash
+uv tool install vocalis
+```
+
+### Option 2: Using `pipx`
+```bash
+pipx install vocalis
+```
+
+### Option 3: In a Virtual Environment
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install vocalis
+```
+
+### Option 4: From Source (Development)
+```bash
+git clone https://github.com/bhatishan2003/vocalis.git
 cd vocalis
 uv sync
-```
-
-To run `vocalis` from anywhere, add an alias to your shell profile (`~/.bashrc` or `~/.zshrc`):
-
-```bash
-alias vocalis="uv run --directory /home/ishan/vocalis vocalis"
-```
-
-Or install it globally using `uv tool`:
-
-```bash
-uv tool install .
 ```
 
 ---
