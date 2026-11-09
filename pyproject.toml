@@ -1,0 +1,30 @@
+[project]
+name = "vocalis"
+version = "0.1.0"
+description = "Wispr Flow-inspired AI voice dictation and code formatting CLI using Groq"
+readme = "README.md"
+authors = [
+    { name = "Ishan Bhat", email = "ishan2003bhat@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.5.1",
+    "groq>=1.7.0",
+    "numpy>=2.5.4",
+    "pynput>=1.8.2",
+    "rich>=15.0.0",
+    "scipy>=1.18.1",
+    "soundcard>=0.4.6",
+]
+
+[project.scripts]
+vocalis = "vocalis:main"
+
+[build-system]
+requires = ["uv_build>=0.12.20,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
