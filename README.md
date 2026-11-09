@@ -1,5 +1,9 @@
 # 🎙️ Vocalis
 
+[![PyPI version](https://img.shields.io/pypi/v/vocalis.svg)](https://pypi.org/project/vocalis/)
+[![Python versions](https://img.shields.io/pypi/pyversions/vocalis.svg)](https://pypi.org/project/vocalis/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 > **A Wispr Flow–inspired, ultra-fast AI voice dictation and code formatting CLI for developers, powered by Groq & `uv`.**
 
 Vocalis brings the magic of modern voice dictation into your terminal and editor. Speak naturally—mumbling, hesitating, or dictating code—and Vocalis transcribes your voice in **~200ms** via Groq Whisper, removes all filler words (*"um"*, *"ah"*, *"like"*), formats your speech into clean prose or syntax-highlighted code with Llama 3.3, and copies it straight to your clipboard using **OSC 52** and native system clipboards.
@@ -23,26 +27,36 @@ Vocalis brings the magic of modern voice dictation into your terminal and editor
 
 ## 🚀 Installation
 
-### Option 1: Using `uv tool` (Recommended)
-Modern Linux and macOS distros protect the system Python environment (PEP 668). `uv tool` installs Vocalis into an isolated environment and makes the `vocalis` command globally available anywhere on your system:
+### Option 1: Standalone CLI with `uv tool` (Recommended)
+`uv tool` installs Vocalis into its own isolated environment and makes the `vocalis` CLI command globally available across your entire system:
 
 ```bash
 uv tool install vocalis
 ```
 
-### Option 2: Using `pipx`
-```bash
-pipx install vocalis
-```
+### Option 2: Using `pip`
 
-### Option 3: In a Virtual Environment
+> [!NOTE]
+> On modern Linux distributions (Ubuntu 23.04+, Debian 12+, Fedora), running `pip install vocalis` directly on the host Python triggers an `error: externally-managed-environment` (PEP 668) to protect OS packages. Use one of the following methods:
+
+**A. In a Virtual Environment:**
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install vocalis
 ```
 
-### Option 4: From Source (Development)
+**B. Using `pipx` (Isolated global CLI):**
+```bash
+pipx install vocalis
+```
+
+**C. System Python override:**
+```bash
+pip install vocalis --break-system-packages
+```
+
+### Option 3: From Source (for Development)
 ```bash
 git clone https://github.com/bhatishan2003/vocalis.git
 cd vocalis
