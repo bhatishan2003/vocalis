@@ -17,6 +17,23 @@ dependencies = [
     "soundcard>=0.4.6",
 ]
 
+license = { text = "MIT" }
+keywords = ["voice", "dictation", "whisper", "groq", "cli", "speech-to-text", "developer-tools", "wispr-flow"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+
+[project.urls]
+Homepage = "https://github.com/bhatishan2003/vocalis"
+Repository = "https://github.com/bhatishan2003/vocalis"
+Issues = "https://github.com/bhatishan2003/vocalis/issues"
+
 [project.scripts]
 vocalis = "vocalis:main"
 
